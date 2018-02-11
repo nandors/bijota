@@ -75,12 +75,12 @@
       menuItems () {
         if (this.isAuthenticated) {
           return [
-            { title: 'Home', path: '/home', icon: 'home' }
+            { title: 'Home', path: '/bijota/home', icon: 'home' }
           ]
         } else {
           return [
-            { title: 'Sign Up', path: '/signup', icon: 'face' },
-            { title: 'Sign In', path: '/signin', icon: 'lock_open' }
+            { title: 'Sign Up', path: '/bijota/signup', icon: 'face' },
+            { title: 'Sign In', path: '/bijota/signin', icon: 'lock_open' }
           ]
         }
       }
