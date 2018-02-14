@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    
     <v-navigation-drawer temporary v-model="sidebar">
       <v-list>
         <v-list-tile
@@ -93,7 +92,6 @@
     }
   }
 </script>
-
 <style lang="stylus">
   @import './stylus/main'
 </style>

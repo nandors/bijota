@@ -7,7 +7,17 @@ import { store } from './store'
 import firebase from 'firebase'
 import { firebaseConfig } from './configfire'
 
-Vue.use(Vuetify, VueFire)
+Vue.use(Vuetify, {
+  theme: {
+    primary: '#673AB7',
+    secondary: '#9FA8DA',
+    accent: '#9c27b0',
+    error: '#f44336',
+    warning: '#ffeb3b',
+    info: '#2196f3',
+    success: '#4caf50'
+  }
+}, VueFire)
 Vue.config.productionTip = false
 
 firebase.initializeApp(firebaseConfig)
