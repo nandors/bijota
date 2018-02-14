@@ -4,10 +4,11 @@ import firebase from 'firebase'
 import NotFound from '@/components/NotFound'
 
 const routerOptions = [
-  { path: '/bijota/', component: 'Landing' },
-  { path: '/bijota/signin', component: 'Signin' },
-  { path: '/bijota/signup', component: 'Signup' },
-  { path: '/bijota/home', component: 'Home', meta: { requiresAuth: true } }
+  { path: '/', component: 'Landing' },
+  { path: '/signin', component: 'Signin' },
+  { path: '/signup', component: 'Signup' },
+  { path: '/book', component: 'Book' },
+  { path: '/home', component: 'Home', meta: { requiresAuth: true } }
 ]
 
 const routes = routerOptions.map(route => {
