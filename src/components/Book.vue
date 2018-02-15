@@ -48,7 +48,7 @@
             <input type="hidden" id="bookKey">
             <v-btn color="blue darken-1" flat @click.native="close">Cancel</v-btn>
             <v-btn id="btnNew" color="blue darken-1" flat @click.native="addBook">Incluir</v-btn>
-            <v-btn id="btnUp"  color="blue darken-1" flat @click.native="updatebtn">Atualizar</v-btn>
+            <v-btn id="btnUp"  class="btn--disabled" color="blue darken-1" flat @click.native="updatebtn">Atualizar</v-btn>
             <v-btn color="blue darken-1" flat @click.native="clear" >Limpar</v-btn>
           </v-card-actions>
        </v-card>
@@ -105,6 +105,7 @@ import Vue from 'vue'
 Vue.use(VueFire)
 let db = Firebase.database()
 let booksRef = db.ref('books')
+
 export default {
   name: 'app',
   firebase: {
@@ -132,8 +133,6 @@ export default {
   },
   computed: {
     loading () {
-      const btnUpdate = document.getElementById('btnUp')
-      btnUpdate.classList.add('btn--disabled')
       return this.$store.getters.getLoading
     }
   },
