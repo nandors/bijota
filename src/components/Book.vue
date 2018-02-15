@@ -46,10 +46,9 @@
           <v-card-actions>
             <v-spacer></v-spacer>
             <input type="hidden" id="bookKey">
-            <v-btn color="blue darken-1" flat @click.native="close">Cancel</v-btn>
-            <v-btn id="btnNew" color="blue darken-1" flat @click.native="addBook">Incluir</v-btn>
-            <v-btn id="btnUp"  class="btn--disabled" color="blue darken-1" flat @click.native="updatebtn">Atualizar</v-btn>
-            <v-btn color="blue darken-1" flat @click.native="clear" >Limpar</v-btn>
+            <v-btn color="blue darken-1" @click.native="close">Cancel</v-btn>
+            <v-btn id="btnNew" color="blue darken-1" @click.native="addBook">Incluir</v-btn>
+            <v-btn id="btnUp"  class="btn--disabled" color="blue darken-1" @click.native="updatebtn">Atualizar</v-btn>
           </v-card-actions>
        </v-card>
      </v-dialog>    
@@ -74,8 +73,8 @@
         >
         <template slot="items" slot-scope="props">
           <td>{{ props.item.title }}</td>
-          <td class="text-xs-right">{{ props.item.url }}</td>
-          <td class="text-xs-right">{{ props.item.author }}</td>
+          <td class="text-xs-left">{{ props.item.url }}</td>
+          <td class="text-xs-left">{{ props.item.author }}</td>
           <td class="justify-center layout px-0">
             <v-btn icon class="mx-0" @click="updateBook(props.item)">
               <v-icon color="teal">edit</v-icon>
